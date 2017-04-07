@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShowboardCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="259" height="323"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="259" height="323"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高跟鞋👠" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyW-MI-h1h">
+                        <rect key="frame" x="10" y="273" width="239" height="40"/>
+                        <color key="backgroundColor" red="1" green="0.82444119171885777" blue="0.49162385546277398" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="nns-hW-3nK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="5ed-mo-dZN">
+                        <rect key="frame" x="10" y="10" width="239" height="263"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="0.9252176694536276" blue="0.74396616612230737" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fyW-MI-h1h" secondAttribute="trailing" constant="10" id="HNG-BV-7p9"/>
+                <constraint firstItem="fyW-MI-h1h" firstAttribute="top" secondItem="5ed-mo-dZN" secondAttribute="bottom" id="I0K-7a-NDt"/>
+                <constraint firstAttribute="trailing" secondItem="5ed-mo-dZN" secondAttribute="trailing" constant="10" id="M1q-jQ-Q40"/>
+                <constraint firstItem="5ed-mo-dZN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="aD2-Zv-HXq"/>
+                <constraint firstItem="5ed-mo-dZN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="jQk-3n-00g"/>
+                <constraint firstAttribute="bottom" secondItem="fyW-MI-h1h" secondAttribute="bottom" constant="10" id="plP-YC-5z6"/>
+                <constraint firstItem="fyW-MI-h1h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="stu-KV-Up4"/>
+            </constraints>
+            <size key="customSize" width="259" height="323"/>
+            <connections>
+                <outlet property="shoseImageView" destination="5ed-mo-dZN" id="Kuq-Xh-CaX"/>
+                <outlet property="shoseNameLabel" destination="fyW-MI-h1h" id="eMG-XM-qqf"/>
+            </connections>
+            <point key="canvasLocation" x="36.5" y="16.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="1.png" width="812" height="1068"/>
+    </resources>
+</document>
