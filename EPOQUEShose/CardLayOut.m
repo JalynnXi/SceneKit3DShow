@@ -25,7 +25,7 @@
 
 - (void)defaultSetup {
     self.spacing = 20.0;
-    self.itemSize = CGSizeMake(280, 400);
+//    self.itemSize = CGSizeMake(280, 400);
     self.edgeInset = UIEdgeInsetsMake(20, 20, 20, 20);
     self.scale = 1.0;
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -39,7 +39,8 @@
     
     NSInteger count = [self.collectionView numberOfItemsInSection:0];
     CGFloat width = self.scrollDirection==UICollectionViewScrollDirectionHorizontal ? count*(self.itemSize.width+self.spacing)-self.spacing+self.edgeInset.left+self.edgeInset.right : self.collectionView.bounds.size.width;
-    CGFloat height = self.scrollDirection==UICollectionViewScrollDirectionHorizontal ? self.collectionView.bounds.size.height : count*(self.itemSize.height+self.spacing)-self.spacing+self.edgeInset.top+self.edgeInset.bottom;
+//    CGFloat height = self.scrollDirection==UICollectionViewScrollDirectionHorizontal ? self.collectionView.bounds.size.height : count*(self.itemSize.height+self.spacing)-self.spacing+self.edgeInset.top+self.edgeInset.bottom;
+    CGFloat height = 0;
     return CGSizeMake(width, height);
 }
 

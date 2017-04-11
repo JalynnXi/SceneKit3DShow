@@ -54,7 +54,7 @@
     
     
     
-    SCNScene *scene  = [sceneSource sceneWithOptions:nil error:nil];;
+    SCNScene *scene  = [sceneSource sceneWithOptions:nil error:nil];
     
     SCNNode *cameraNode = [SCNNode node];
     cameraNode.camera = [SCNCamera camera];
@@ -102,21 +102,29 @@
     [self.view addSubview:xjxbutton];
 }
 
-
 -(void)changeColor{
+    
     SCNNode *shirtNode = [_scnView.scene.rootNode childNodeWithName:@"polySurface394" recursively:YES];
     shirtNode.geometry.firstMaterial.diffuse.contents  = RandomColor;
-    //    [shirtNode removeFromParentNode];
-    [_shoseNode replaceChildNode:shirtNode with:shirtNode];
+//    SCNNode *newnode = [shirtNode clone];
+////    [_shoseNode replaceChildNode:shirtNode with:newnode];
+//    [shirtNode removeFromParentNode];
+//    SCNNode *sunNode = [SCNNode node];
+//    sunNode.geometry = [SCNSphere sphereWithRadius:100];
+//    sunNode.geometry.firstMaterial.diffuse.contents = [UIColor redColor];
+    
+    NSLog(@"%@ ❤️❤️❤️",shirtNode);
+//    NSLog(@"%@ ❤️❤️❤️",newnode);
+//    [_shoseNode replaceChildNode:shirtNode with:sunNode];
+//    [_shoseNode addChildNode:sunNode];
+    
 }
 
 -(void)heartClothes{
     SCNNode *shirtNode = [_scnView.scene.rootNode childNodeWithName:@"Binding" recursively:YES];
     shirtNode.geometry.firstMaterial.diffuse.contents = RandomColor;
+//    SCNAction *sunaction = [SCNAction repeatAction:[SCNAction rotateByAngle:<#(CGFloat)#> aroundAxis:<#(SCNVector3)#> duration:<#(NSTimeInterval)#>] count:<#(NSUInteger)#>]
 }
-
-
-
 
 
 - (void)didReceiveMemoryWarning {
@@ -124,14 +132,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
